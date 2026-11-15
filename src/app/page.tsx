@@ -137,8 +137,15 @@ export default function Landing() {
 
       {/* ---------- HERO ---------- */}
       <section className="relative overflow-hidden bg-navy-900 text-white">
-        {/* Original illustration: skyline-as-bar-chart with a rising cash-flow line (public/hero-bg.svg) */}
-        <div className="hero-bg pointer-events-none absolute inset-0 bg-[url(/hero-bg.svg)] bg-cover bg-bottom opacity-40 [mask-image:linear-gradient(to_right,transparent_0%,transparent_35%,black_62%)] lg:opacity-70" />
+        {/* Hero background: a real photo at public/hero/hero.jpg sits on top; if it's missing,
+            the original skyline illustration (public/hero-bg.svg) shows instead. */}
+        <div
+          className="hero-bg pointer-events-none absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: "url(/hero/hero.jpg), url(/hero-bg.svg)" }}
+        />
+        {/* Navy overlay keeps the headline readable over any photo */}
+        <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(90deg,rgba(11,26,46,0.96)_0%,rgba(11,26,46,0.88)_38%,rgba(20,43,74,0.55)_70%,rgba(20,43,74,0.35)_100%)]" />
+        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-navy-900 to-transparent" />
         <div className="pointer-events-none absolute inset-0 opacity-[0.07] [background-image:radial-gradient(circle_at_1px_1px,white_1px,transparent_0)] [background-size:28px_28px]" />
         <div className="glow pointer-events-none absolute -right-40 -top-40 h-[560px] w-[560px] rounded-full bg-[radial-gradient(circle,rgba(22,163,106,0.35),transparent_65%)]" />
         <div className="glow pointer-events-none absolute -bottom-60 -left-40 h-[560px] w-[560px] rounded-full bg-[radial-gradient(circle,rgba(42,120,214,0.35),transparent_65%)] [animation-delay:-3s]" />
