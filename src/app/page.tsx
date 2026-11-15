@@ -138,7 +138,7 @@ export default function Landing() {
       {/* ---------- HERO ---------- */}
       <section className="relative overflow-hidden bg-navy-900 text-white">
         {/* Original illustration: skyline-as-bar-chart with a rising cash-flow line (public/hero-bg.svg) */}
-        <div className="hero-bg pointer-events-none absolute inset-0 bg-[url(/hero-bg.svg)] bg-cover bg-bottom opacity-40 [mask-image:linear-gradient(to_right,transparent_0%,black_45%)] lg:opacity-70" />
+        <div className="hero-bg pointer-events-none absolute inset-0 bg-[url(/hero-bg.svg)] bg-cover bg-bottom opacity-40 [mask-image:linear-gradient(to_right,transparent_0%,transparent_35%,black_62%)] lg:opacity-70" />
         <div className="pointer-events-none absolute inset-0 opacity-[0.07] [background-image:radial-gradient(circle_at_1px_1px,white_1px,transparent_0)] [background-size:28px_28px]" />
         <div className="glow pointer-events-none absolute -right-40 -top-40 h-[560px] w-[560px] rounded-full bg-[radial-gradient(circle,rgba(22,163,106,0.35),transparent_65%)]" />
         <div className="glow pointer-events-none absolute -bottom-60 -left-40 h-[560px] w-[560px] rounded-full bg-[radial-gradient(circle,rgba(42,120,214,0.35),transparent_65%)] [animation-delay:-3s]" />
